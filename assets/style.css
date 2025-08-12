@@ -1,0 +1,54 @@
+/* Base */
+:root{
+  --bg:#0b0b0d;
+  --panel:#121217;
+  --muted:#a0a0ad;
+  --text:#f4f4f7;
+  --accent:#8b5cf6;
+  --accent-2:#22d3ee;
+  --border:#1f1f27;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:radial-gradient(1200px 800px at 20% -10%,rgba(139,92,246,.18),transparent 60%),
+             radial-gradient(1000px 600px at 90% 10%,rgba(34,211,238,.12),transparent 60%),
+             var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.center{text-align:center}
+.hero{padding-top:60px;padding-bottom:60px}
+.brand{font-weight:800;font-size:clamp(32px,5vw,56px);margin:0 0 10px}
+.subtitle{color:var(--muted);max-width:800px;margin:0 auto 24px}
+
+/* Cards */
+.link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:28px 0 16px}
+@media (max-width:640px){.link-grid{grid-template-columns:1fr}}
+.card{
+  display:block;padding:22px;border:1px solid var(--border);border-radius:16px;background:rgba(18,18,23,.85);
+  box-shadow:var(--shadow);text-decoration:none;color:var(--text);transition:.2s transform,.2s border-color;
+}
+.card:hover{transform:translateY(-2px);border-color:#2d2d39}
+.card-title{font-weight:700;margin-bottom:4px}
+.card-sub{color:var(--muted);font-size:14px}
+.accent-card{background:linear-gradient(180deg,rgba(139,92,246,.12),rgba(255,255,255,.02))}
+
+/* Social list */
+.social h2{margin:18px 0 8px}
+.social ul{list-style:none;padding:0;margin:0;display:flex;gap:16px;justify-content:center}
+.social a{color:var(--text);text-decoration:none;border-bottom:1px dashed transparent}
+.social a:hover{border-bottom-color:var(--text)}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
+
+/* Age gate */
+.age-gate{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:50}
+.age-modal{max-width:520px;background:#111118;border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.age-actions{display:flex;gap:10px;margin-top:12px}
+.hidden{display:none}
